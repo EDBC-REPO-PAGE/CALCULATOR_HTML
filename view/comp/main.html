@@ -1,0 +1,48 @@
+<main>
+
+    <section class="uk-padding-large uk-position-center 
+                    uk-flex uk-flex-center uk-flex-middle
+                    uk-flex-column">
+
+        <div class="uk-width-1-2@m uk-width-1-1 uk-padding-small uk-inline">
+            <div display class="uk-height-small">
+                <div carryLCD class="uk-overflow-auto" style="height:100px"></div>
+                <h3 class="uk-position-bottom-right uk-position-small uk-text-warning"
+                    mainLCD>hola mundo</h3>
+            </div>
+        </div>
+
+        <div class="uk-flex uk-flex-wrap uk-child-width-1-4
+                    uk-width-1-2@m uk-width-1-1">
+
+            <div class="uk-padding-small uk-align-self-center uk-width-1-2">
+                <a class="uk-button uk-enphasis uk-width-expand"
+                   type="action" onclick="window.action(this)">AC</a>
+            </div>
+
+            <div class="uk-padding-small uk-align-self-center">
+                <a class="uk-button uk-enphasis uk-width-expand"
+                   type="action" onclick="window.action(this)">DEL</a>
+            </div>
+
+            /°(()=>{
+                const data = '÷789×456-123+0.'.split('');
+                return data.map(x=>`
+                    <div class="uk-padding-small uk-align-self-center">
+                        <a class="uk-button uk-enphasis uk-width-expand"
+                           type="${isNaN(x)?'sign':'number'}"
+                           onclick="window.action(this)">${x}</a>
+                    </div>
+                `).join('');
+            })()°/
+
+            <div class="uk-padding-small uk-align-self-center uk-width-1-2">
+                <a class="uk-button uk-enphasis uk-width-expand"
+                   type="action" onclick="window.action(this)">=</a>
+            </div>
+
+        </div>
+        
+    </section>
+
+</main>
